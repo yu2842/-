@@ -2,20 +2,18 @@
 
 import numpy as np
 import pandas as pd
+
+
+
+
+'''  (보류)
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 
-# [ '지역명','연도','월','분양가격(제곱미터)' ]
-# [   서울   ,2016 ,3월 ,      6173         ] 
-import pandas as pd
-
-data = pd.read_csv('신규 민간아파트 분양가격.csv', on_bad_lines='skip', delimiter=',', encoding='utf-8', encoding_errors='ignore')
+** 신규 민간아파트 가격 예측 머신러닝** 
 
 # 특성(X)와 타겟(y) 분리
-X = data[["Region","Year", "Month", "Price_per_square meter", "Price" ]]
-y = data["price"]
-
 
 
 # 학습용 데이터와 테스트용 데이터 분리
@@ -29,18 +27,41 @@ y = data["price"]
 # 예측 성능 평가
 print("R^2:", )
 
+'''
 
 
 
-# 메인 함수 동작 : 머신러닝 이용
+# [ '지역명','규모','연도','월','분양가격(제곱미터)' ]
+# [   서울  ,'모든면적', '2016 ,3월 ,      6173         ]
+
+
+# 파일 불러서 data에 저장하는 함수
+def load_wdbc_data(filename): #규모는 '모든 면적' 만  저장한다.  지역별 규모별 제곱미터당 평균 분양가격 csv에는 전체 데이터만 존재하기 때문에
+
+    with open(filename) as f:
+            for line in f.readlines():
+                items = line.split(',')
+
+
+            
+
+
+
+
+
+
+
+
+
+# 메인 함수 동작 
 if __name__ == '__main__':
-    #데이터 로드
+     
 
 
+
+    #데이터 로드 ( csv 파일 불러오기)
 
     #데이터 분류
-    
 
 
-
-    # 데이터 시각화
+    # 데이터 시각화 ( 시기별로 변하는가격 그래프 -> matplotlib 등 파이썬 라이브러리 활용 )
