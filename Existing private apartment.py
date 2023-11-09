@@ -15,6 +15,9 @@ print(df)
 '인천'  ,
 '부산'  , 
 '''
+
+
+
 def load_data(filename):
     class NaData :
         data = []
@@ -27,8 +30,8 @@ def load_data(filename):
 
     with open(filename,encoding='utf-8') as f:
         a = []
-        for line in f.readlines():
-            items = line.split(',')
+        for line in f.readlines():  
+            items = line.rstrip('\n').split(',')
             if items[1]=='모든면적':
                 naData.data.append(items[0:])
         naData.data = np.array(naData.data)
