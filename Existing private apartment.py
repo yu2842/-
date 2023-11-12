@@ -2,8 +2,15 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
 # 1평 =  3.305785 m**2
+
+
+
+
 
 def load_data(filename):
     class NaData:
@@ -24,6 +31,11 @@ def load_data(filename):
 
     return naData
 
+
+
+
+
+
 def graph(data, region):
     selected_region = region
     region_data = dz[dz['Region'] == selected_region]
@@ -42,22 +54,6 @@ def graph(data, region):
     plt.grid(True)
     plt.show()
 
-
-
-# 데이터 준비
-df = pd.read_csv('data.csv')
-df.set_index('date', inplace=True)
-df = df.dropna()
-
-# 선형 회귀 모델 학습
-model = LinearRegression()
-model.fit(df['year'], df['price'])
-
-# 미래의 분양가격 예측
-future_price = model.predict(np.arange(2024, 2030, 1))
-
-# 결과 출력
-print(future_price)
 
 
 
