@@ -92,10 +92,11 @@ if __name__ == "__main__":
     plt.figure(figsize=(10, 6))
     # 서울
     plt.subplot(311)
-    plt.plot(s_data['Period'], s_data['Price'], color='blue', marker='o', linestyle='-', label='Sesoul')
+    plt.plot(s_data['Period'], s_data['Price'], color='blue', linestyle='-', label='Sesoul')
     plt.title('Price trends by Metropolitan area by period')
-    plt.xlabel('Period')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -105,9 +106,10 @@ if __name__ == "__main__":
     plt.grid(True)
     # 인천
     plt.subplot(312)
-    plt.plot(in_data['Period'], in_data['Price'], color='red', marker='o', linestyle='-', label='Incheon')
-    plt.xlabel('Period')
+    plt.plot(in_data['Period'], in_data['Price'], color='red', linestyle='-', label='Incheon')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -117,7 +119,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 경기
     plt.subplot(313)
-    plt.plot(gy_data['Period'], gy_data['Price'], color='green', marker='o', linestyle='-', label='Gyeonggi')
+    plt.plot(gy_data['Period'], gy_data['Price'], color='green', linestyle='-', label='Gyeonggi')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
@@ -144,10 +146,12 @@ if __name__ == "__main__":
     plt.figure(figsize=(10, 6))
     # 부산
     plt.subplot(231)
-    plt.plot(bu_data['Period'], bu_data['Price'], color='blue', marker='o', linestyle='-', label='Busan')
+    plt.subplots_adjust(left=0.125, bottom=0.1,  right=0.9, top=0.9, wspace=0.4)
+    plt.plot(bu_data['Period'], bu_data['Price'], color='blue', linestyle='-', label='Busan')
     plt.title('Price trends by megalopolis ans Sejong by period')
-    plt.xlabel('Period')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -157,9 +161,10 @@ if __name__ == "__main__":
     plt.grid(True)
     # 대구
     plt.subplot(232)
-    plt.plot(dae_data['Period'], dae_data['Price'], color='red', marker='o', linestyle='-', label='Daegu')
-    plt.xlabel('Period')
+    plt.plot(dae_data['Period'], dae_data['Price'], color='red', linestyle='-', label='Daegu')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -169,9 +174,10 @@ if __name__ == "__main__":
     plt.grid(True)
     # 광주
     plt.subplot(233)
-    plt.plot(gw_data['Period'], gw_data['Price'], color='green', marker='o', linestyle='-', label='Gwangju')
-    plt.xlabel('Period')
+    plt.plot(gw_data['Period'], gw_data['Price'], color='green', linestyle='-', label='Gwangju')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -181,7 +187,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 대전
     plt.subplot(234)
-    plt.plot(dj_data['Period'], dj_data['Price'], color='orange', marker='o', linestyle='-', label='Daejeon')
+    plt.plot(dj_data['Period'], dj_data['Price'], color='orange', linestyle='-', label='Daejeon')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
@@ -193,7 +199,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 울산
     plt.subplot(235)
-    plt.plot(ul_data['Period'], ul_data['Price'], color='purple', marker='o', linestyle='-', label='Ulsan')
+    plt.plot(ul_data['Period'], ul_data['Price'], color='purple', linestyle='-', label='Ulsan')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
@@ -205,7 +211,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 세종
     plt.subplot(236)
-    plt.plot(sg_data['Period'], sg_data['Price'], color='cyan', marker='o', linestyle='-', label='Sejong')
+    plt.plot(sg_data['Period'], sg_data['Price'], color='cyan', linestyle='-', label='Sejong')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
@@ -236,22 +242,25 @@ if __name__ == "__main__":
     plt.figure(figsize=(10, 4))
     # 강원
     plt.subplot(241)
-    plt.plot(gan_data['Period'], gan_data['Price'], color='blue', marker='o', linestyle='-', label='Gangwon')
+    plt.subplots_adjust(left=0.125, bottom=0.1,  right=0.9, top=0.9, wspace=0.54)
+    plt.plot(gan_data['Period'], gan_data['Price'], color='blue', linestyle='-', label='Gangwon')
     plt.title('Price trends by the provinces by period')
-    plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
     plt.xticks(x[::200])
     plt.xticks(rotation=45)
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     plt.legend()
     plt.grid(True)
     # 충북
     plt.subplot(242)
-    plt.plot(cb_data['Period'], cb_data['Price'], color='red', marker='o', linestyle='-', label='Chungbuk')
-    plt.xlabel('Period')
+    plt.plot(cb_data['Period'], cb_data['Price'], color='red', linestyle='-', label='Chungbuk')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -261,9 +270,10 @@ if __name__ == "__main__":
     plt.grid(True)
     # 충남
     plt.subplot(243)
-    plt.plot(cn_data['Period'], cn_data['Price'], color='green', marker='o', linestyle='-', label='Chungnam')
-    plt.xlabel('Period')
+    plt.plot(cn_data['Period'], cn_data['Price'], color='green', linestyle='-', label='Chungnam')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -273,9 +283,10 @@ if __name__ == "__main__":
     plt.grid(True)
     # 전북
     plt.subplot(244)
-    plt.plot(jb_data['Period'], jb_data['Price'], color='orange', marker='o', linestyle='-', label='Jeonbuk')
-    plt.xlabel('Period')
+    plt.plot(jb_data['Period'], jb_data['Price'], color='orange', linestyle='-', label='Jeonbuk')
     plt.ylabel('Price')
+    ax = plt.gca()
+    ax.axes.xaxis.set_ticklabels([])
     x = dz['Period']
     y = [3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000]
     plt.yticks(y)
@@ -285,7 +296,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 전남
     plt.subplot(245)
-    plt.plot(jn_data['Period'], jn_data['Price'], color='purple', marker='o', linestyle='-', label='Jeonnam')
+    plt.plot(jn_data['Period'], jn_data['Price'], color='purple', linestyle='-', label='Jeonnam')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
@@ -297,7 +308,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 경북
     plt.subplot(246)
-    plt.plot(gb_data['Period'], gb_data['Price'], color='cyan', marker='o', linestyle='-', label='Gyeongbuk')
+    plt.plot(gb_data['Period'], gb_data['Price'], color='cyan', linestyle='-', label='Gyeongbuk')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
@@ -309,7 +320,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 경남
     plt.subplot(247)
-    plt.plot(gn_data['Period'], gn_data['Price'], color='pink', marker='o', linestyle='-', label='Gyeongnam')
+    plt.plot(gn_data['Period'], gn_data['Price'], color='pink', linestyle='-', label='Gyeongnam')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
@@ -321,7 +332,7 @@ if __name__ == "__main__":
     plt.grid(True)
     # 제주
     plt.subplot(248)
-    plt.plot(jj_data['Period'], jj_data['Price'], color='gray', marker='o', linestyle='-', label='Jeju')
+    plt.plot(jj_data['Period'], jj_data['Price'], color='gray', linestyle='-', label='Jeju')
     plt.xlabel('Period')
     plt.ylabel('Price')
     x = dz['Period']
