@@ -64,7 +64,7 @@ if __name__ == "__main__":
     dz = ds.drop(['Year', 'Month'], axis=1)
     dz['Price'] = pd.to_numeric(df['Price'], errors='coerce')
     dz['Price'] = dz['Price'].astype(float)
-    # 개별 그래프
+    # 개별 graph
     #graph(dz, '서울')
     #graph(dz, '인천')
     #graph(dz, '경기')
