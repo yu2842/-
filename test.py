@@ -50,10 +50,8 @@ if __name__ == "__main__":
     # 모델 평가 (R-squared 계산)
     r2 = r2_score(y_test, predictions)
 
-    print(f'정확도 {round(r2*100)}%')
-
     # 새로운 데이터에 대한 예측 (실제 데이터에 맞게 수정 필요)
-    print("알고 싶은 지역의 해당 연도와 월을 입력해주십시오.")
+    print("알고 싶은 지역의 해당 연도와 월을 입력해주십시오.(정확도{}%)".format(round(r2*100)))
     year, month = input().split()
     new_data = pd.DataFrame({'Year':[year], 'Month':[month]})
     new_prediction = model.predict(new_data)
