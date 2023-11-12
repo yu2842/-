@@ -34,8 +34,10 @@ if __name__ == "__main__":
     regions = df["Region"].unique()
     
     print("예측 가격을 알고 싶은 지역, 연도, 월을 입력해주십시오.")
-    region, year, month = input().split() # 서울,2023,4
+    region, year, month = input().split() # ex)서울 2024 4
 
+
+    # for문에서 지역 데이터 중 해당 지역만 저장 및 예측 
     for rg in regions:
         if rg==region :
             features = df.loc[df["Region"] == region,["Year", "Month"]]
@@ -52,11 +54,11 @@ if __name__ == "__main__":
             # 테스트 데이터에 대한 예측
             predictions = model.predict(X_test)
 
-            # 모델 평가 (R-squared 계산)
+            # 모델 평가 (결정계수 이용)
             r2 = r2_score(y_test, predictions)
 
             # 새로운 데이터에 대한 예측
             new_data = pd.DataFrame({'Year':[year], 'Month':[month]})
             new_prediction = model.predict(new_data)
-            print(" {}년 {}월 {}지역 예측 분양가격  : {} (정확도 {}%) ".format(year,month,region,round(new_prediction[0]),round(r2*100)))
+            print(" {}년 {}월 {}지역 예측 분양가격  : {}원(제곱미터) (정확도 {}%) ".format(year,month,region,round(new_prediction[0]),round(r2*100))) #2025년 3월 경북지역 예측 분양가격  : 3705 (정확도 95%)
     
