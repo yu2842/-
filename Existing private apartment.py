@@ -4,19 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # 1평 =  3.305785 m**2
-'''
-df = pd.read_csv('지역별_규모별_제곱미터당_평균_분양가격.csv', on_bad_lines='skip', delimiter=',', encoding='utf-8', encoding_errors='ignore')
-
-print(df)
-'''
-'''
-
-'지역명','규모구분','연도','월','분양가격(제곱미터)']
-'서울'  , 전체
-'인천'  ,
-'부산'  , 
-'''
-
 
 def load_data(filename):
     class NaData:
@@ -36,6 +23,26 @@ def load_data(filename):
         naData.data = np.array(naData.data)
 
     return naData
+
+
+
+# 데이터 준비
+df = pd.read_csv('data.csv')
+df.set_index('date', inplace=True)
+df = df.dropna()
+
+# 선형 회귀 모델 학습
+model = LinearRegression()
+model.fit(df['year'], df['price'])
+
+# 미래의 분양가격 예측
+future_price = model.predict(np.arange(2024, 2030, 1))
+
+# 결과 출력
+print(future_price)
+
+
+
 
 
 if __name__ == "__main__":
