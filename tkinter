@@ -1,0 +1,138 @@
+import tkinter as tk
+import numpy as np
+from tkinter import messagebox
+import Existing_private_apartment
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+
+def load_data(filename):
+    class NaData:
+        data = []
+        target = []
+        target_name = []
+        feature_name = ['지역명', '규모구분', '연도', '월', '분양가격(제곱미터)']
+
+    naData = NaData()
+
+    with open(filename, encoding='utf-8') as f:
+        a = []
+        for line in f.readlines():
+            items = line.rstrip('\n').split(',')
+            if items[1] == '모든면적':
+                naData.data.append(items[0:])
+        naData.data = np.array(naData.data)
+
+    return naData
+
+root=tk.Tk()
+
+
+# 지역, 연도 ,월 표시
+'''
+def calc(event):
+    label2.config(str(eval(entry.get())))
+ entry=tk.Entry(root)
+ entry.bind("<Return>", calc)
+    entry.pack()
+
+label2=tk.Label(root)
+label2.pack()
+
+def show_region(region):
+    messagebox.showinfo("선택한 지역", f"{region}을(를) 선택하셨습니다.")
+
+# 아파트 데이터
+#Existing_private_apartment
+#def plot_graph():
+'''
+
+# 그래프 그리기
+def plot_graph(selected_region):
+    region_data = [row for row in naData.data if row[0] == selected_region]
+    years = region_data[:, 2].astype(float)
+    months = region_data[:,3].astype(float)
+    prices = region_data[:, 4].astype(float)
+
+    # Matplotlib 그래프 생성
+    plt.figure(figsize=(10, 6))
+    plt.plot(years, prices, marker='o')
+    plt.title(f"{selected_region} 지역 분양가격 추이")
+    plt.xlabel("연도")
+    plt.ylabel("분양가격(제곱미터)")
+
+    # Tkinter 창에 그래프 표시
+    canvas = FigureCanvasTkAgg(plt.gcf(), master=root)
+    canvas.draw()
+    canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+
+
+
+#  메뉴바
+def create_menu():
+    menu_bar = tk.Menu(root)
+
+    # 수도권 메뉴
+    sudogwon_menu = tk.Menu(menu_bar, tearoff=0)
+    sudogwon_menu.add_command(label="서울", command=lambda: show_region("서울"))
+    sudogwon_menu.add_command(label="경기도", command=lambda: show_region("경기도"))
+    sudogwon_menu.add_command(label="인천", command=lambda: show_region("인천"))
+
+    # 지방 메뉴
+    local_menu = tk.Menu(menu_bar, tearoff=0)
+    local_menu.add_command(label="부산", command=lambda: show_region("부산"))
+    local_menu.add_command(label="대구", command=lambda: show_region("대구"))
+    local_menu.add_command(label="광주", command=lambda: show_region("광주"))
+    local_menu.add_command(label="대전", command=lambda: show_region("대전"))
+    local_menu.add_command(label="울산", command=lambda: show_region("울산"))
+    local_menu.add_command(label="강원도", command=lambda: show_region("강원도"))
+    local_menu.add_command(label="충청북도", command=lambda: show_region("충청북도"))
+    local_menu.add_command(label="충청남도", command=lambda: show_region("충청남도"))
+    local_menu.add_command(label="전라북도", command=lambda: show_region("전라북도"))
+    local_menu.add_command(label="전라남도", command=lambda: show_region("전라남도"))
+    local_menu.add_command(label="경상북도", command=lambda: show_region("경상북도"))
+    local_menu.add_command(label="경상남도", command=lambda: show_region("경상남도"))
+    local_menu.add_command(label="제주도", command=lambda: show_region("제주도"))
+
+    menu_bar.add_cascade(label="수도권", menu=sudogwon_menu)
+    menu_bar.add_cascade(label="지방", menu=local_menu)
+
+    return menu_bar
+
+
+def on_sudogwon_select(event):
+    selected_region = sudogwon_combobox.get()
+    show_region(selected_region)
+
+def on_local_select(event):
+    selected_region = local_combobox.get()
+    show_region(selected_region)
+
+def create_menu():
+    menu_bar = tk.Menu(root)
+
+if __name__ == "__main__":
+
+    naData = load_data("your_data_file.csv")
+
+    root.title('민간아파트 가격 예측 프로그램')
+
+    root.geometry("1024x768+100+100")
+    root.resizable(False, False)
+
+    #제목#
+    label_1=tk.Label(root, text="민간아파트 가격 추이", width=20, height=5, fg="blue")
+    label_1.pack()
+
+    # 메뉴 생성
+    menu_bar = create_menu()
+    root.config(menu=menu_bar)
+
+
+    #
+    canvas = FigureCanvasTkAgg(plt.gcf(), master=root)
+    canvas.draw()
+    canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+
+
+    root.mainloop()

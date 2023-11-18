@@ -62,24 +62,7 @@ if __name__ == "__main__":
     dz = ds.drop(['Year', 'Month'], axis=1)
     dz['Price'] = pd.to_numeric(df['Price'], errors='coerce')
     dz['Price'] = dz['Price'].astype(float)
-    # 개별 graph
-    #graph(dz, '서울')
-    #graph(dz, '인천')
-    #graph(dz, '경기')
-    #graph(dz, '부산')
-    #graph(dz, '대구')
-    #graph(dz, '광주')
-    #graph(dz, '대전')
-    #graph(dz, '울산')
-    #graph(dz, '세종')
-    #graph(dz, '강원')
-    #graph(dz, '충북')
-    #graph(dz, '충남')
-    #graph(dz, '전북')
-    #graph(dz, '전남')
-    #graph(dz, '경북')
-    #graph(dz, '경남')
-    #graph(dz, '제주')
+    
     # 한번에 그리기
     mregion = ['서울','인천','경기']
     fregion = ['부산','대구','광주','대전','울산','세종']
