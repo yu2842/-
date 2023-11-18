@@ -4,26 +4,7 @@ from tkinter import messagebox
 import Existing_private_apartment
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-
-
-def load_data(filename):
-    class NaData:
-        data = []
-        target = []
-        target_name = []
-        feature_name = ['지역명', '규모구분', '연도', '월', '분양가격(제곱미터)']
-
-    naData = NaData()
-
-    with open(filename, encoding='utf-8') as f:
-        a = []
-        for line in f.readlines():
-            items = line.rstrip('\n').split(',')
-            if items[1] == '모든면적':
-                naData.data.append(items[0:])
-        naData.data = np.array(naData.data)
-
-    return naData
+import file_loading
 
 root=tk.Tk()
 
