@@ -1,0 +1,238 @@
+[33mcommit 0546ba53a8ca6efcf956c1fe54c725c1e3076555[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sat Nov 18 16:06:00 2023 +0900
+
+    day4
+
+[33mcommit 2f5ff2d45b459f43ca1d07644eb2668e0e790e4d[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 19:32:04 2023 +0900
+
+    add data2
+
+[33mcommit 06008bc0d4be46d9aef02314db115f88b1420362[m
+Author: yu <cofmadl21@naver.com>
+Date:   Sun Nov 12 18:15:10 2023 +0900
+
+    c
+
+[33mcommit b14a56950b244b46d7f5f6e8ed80f31a9ddc4abc[m
+Author: yu <cofmadl21@naver.com>
+Date:   Sun Nov 12 17:03:17 2023 +0900
+
+    a
+
+[33mcommit a082fa302f3bf704ba7e6c97c643b4fa388fa757[m
+Merge: 4253b18 fd0fb92
+Author: yu <cofmadl21@naver.com>
+Date:   Sun Nov 12 17:02:35 2023 +0900
+
+    Merge branch 'main' of https://github.com/yu2842/Trend-of-apartment-sales-prices
+
+[33mcommit 4253b18fc3ffd9e23433b48edfa00ec285bd4466[m
+Author: yu <cofmadl21@naver.com>
+Date:   Sun Nov 12 17:02:05 2023 +0900
+
+    그래프
+
+[33mcommit fd0fb92e09a59460af1c06c9532b1f194a683907[m
+Merge: 9049620 93e965c
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 16:43:25 2023 +0900
+
+    Merge branch 'main' of https://github.com/yu2842/Trend-of-apartment-sales-prices
+
+[33mcommit 9049620f4d61fdd6bfab837df0177619c7af3d49[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 16:41:55 2023 +0900
+
+    regional_price_modify
+
+[33mcommit 93e965cb72ffe3adc9444774e6126b836d979a39[m
+Author: yu <cofmadl21@naver.com>
+Date:   Sun Nov 12 16:39:58 2023 +0900
+
+    change
+
+[33mcommit 3613e449469297b3ef139b382654d8517be745cc[m
+Merge: fd95139 d9a3450
+Author: yu <cofmadl21@naver.com>
+Date:   Sun Nov 12 15:34:45 2023 +0900
+
+    Merge branch 'main' of https://github.com/yu2842/Trend-of-apartment-sales-prices
+
+[33mcommit fd95139adc8b90a9366a9f9fd7f4e48994f0fda5[m
+Author: yu <cofmadl21@naver.com>
+Date:   Sun Nov 12 15:33:15 2023 +0900
+
+    그래프
+
+[33mcommit d9a345095c6dae76b374070f51584941620c9b3d[m
+Author: yu2842 <144086393+yu2842@users.noreply.github.com>
+Date:   Sun Nov 12 15:01:34 2023 +0900
+
+    Add files via upload
+
+[33mcommit 0889925981f9e6c4c71f86542ca86f0ce2b07b52[m
+Author: yu2842 <144086393+yu2842@users.noreply.github.com>
+Date:   Sun Nov 12 15:01:10 2023 +0900
+
+    Delete 지역별_규모별_㎡당_평균_분양가격_20231109223315.xlsx
+
+[33mcommit 7f267a18abf25b84bb9db2cdf698d09783849045[m
+Merge: ac45aff 65d8088
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 14:49:05 2023 +0900
+
+    Merge branch 'main' of https://github.com/yu2842/Trend-of-apartment-sales-prices
+
+[33mcommit ac45afffd0335896aa9f99eff826c130695d4066[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 14:48:49 2023 +0900
+
+    regional price modify
+
+[33mcommit 65d8088baa41a5e6343f3d341df44d6693c1481f[m
+Author: yu2842 <144086393+yu2842@users.noreply.github.com>
+Date:   Sun Nov 12 14:48:10 2023 +0900
+
+    Add files via upload
+
+[33mcommit 31c241e549c436abe01005005c96f5aa33dcf95b[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 13:24:26 2023 +0900
+
+    modify_2
+
+[33mcommit 6ae3337ae17959fb9fe86ee016f91a28ebd0387d[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 13:21:54 2023 +0900
+
+    accuracy reference modify
+
+[33mcommit 707b0fe5eb7943127b3b13881ef0480c6a9560b4[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 13:15:10 2023 +0900
+
+    k-neighbor machine-learning
+
+[33mcommit 5a2613a9e9c4d441736ef568a6774026681f1d05[m
+Merge: 3cdb2f2 be09a3d
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 12:09:34 2023 +0900
+
+    Merge branch 'main' of https://github.com/yu2842/Trend-of-apartment-sales-prices
+
+[33mcommit 3cdb2f253faddb936cf5a6107476c7ab4702f9a0[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Sun Nov 12 12:06:43 2023 +0900
+
+    day3
+
+[33mcommit be09a3d04a0757813e684a363befecb90f18db1a[m
+Author: yu <cofmadl21@naver.com>
+Date:   Fri Nov 10 01:22:10 2023 +0900
+
+    x축 변경
+
+[33mcommit f33cf15d45b12d96615c7b9a100b6cee99f86c20[m
+Author: yu <cofmadl21@naver.com>
+Date:   Fri Nov 10 00:48:43 2023 +0900
+
+    graph
+
+[33mcommit 81cb5ab77efdbc99a42143cd73f0622f5d4f202d[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Thu Nov 9 23:22:23 2023 +0900
+
+    csv file modify
+
+[33mcommit 73b6867839b583f45ee31ecac128d3399998b100[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Thu Nov 9 23:20:40 2023 +0900
+
+    remove '\n'
+
+[33mcommit 86462bbd9bb94820b90fc496aac20be5fd2675b3[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Thu Nov 9 23:06:17 2023 +0900
+
+    day-2
+
+[33mcommit 9a3b8edb91faab24040500e73821445ebda2903c[m
+Author: yu2842 <144086393+yu2842@users.noreply.github.com>
+Date:   Thu Nov 9 22:13:00 2023 +0900
+
+    Delete 지역별_규모별_㎡당_평균_분양가격_20231108233150.csv
+
+[33mcommit 0d87c27da2d4848e2e1557afa158f2f4bc735a43[m
+Author: yu2842 <144086393+yu2842@users.noreply.github.com>
+Date:   Thu Nov 9 22:11:26 2023 +0900
+
+    Add files via upload
+
+[33mcommit c2f20a35f77e35d754d3bfce92e7f20c4bc63e24[m
+Author: yu2842 <144086393+yu2842@users.noreply.github.com>
+Date:   Wed Nov 8 23:46:41 2023 +0900
+
+    Add files via upload
+
+[33mcommit 9b529d58eeb3e856495d5458efb062c71e702b79[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Wed Nov 8 23:20:06 2023 +0900
+
+    today's last change
+
+[33mcommit 3b3242f3c51d98d62a69a0689ec4921a2aa94bc3[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Wed Nov 8 23:06:00 2023 +0900
+
+    주석
+
+[33mcommit f2d8ebab9905f68abc8649fc2ce26fd2514c8b01[m
+Author: kohjun <kohjun1234@gmail.com>
+Date:   Wed Nov 8 22:42:17 2023 +0900
+
+    Update 지역별_규모별_제곱미터당_평균_분양가격.csv
+
+[33mcommit eb6b711234caac8e89b72aee3df62c816750b2ad[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Wed Nov 8 22:41:00 2023 +0900
+
+    data change
+
+[33mcommit 61c9afb49103d821f429a85084b18efc5e5c80c2[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Wed Nov 8 21:25:38 2023 +0900
+
+    delete
+
+[33mcommit 9fe9d5580b2d1dbe5fb31461bda62a354a69a32e[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Wed Nov 8 21:25:13 2023 +0900
+
+    regional_scale_csv
+
+[33mcommit 6fb267fadc6d68a8c1a360acd3408ec2a751bae0[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Wed Nov 8 21:17:40 2023 +0900
+
+    data_sort
+
+[33mcommit 59880578b3412e03ff9a9a2657dafe30da672264[m
+Author: yu2842 <144086393+yu2842@users.noreply.github.com>
+Date:   Wed Nov 8 21:14:18 2023 +0900
+
+    Add files via upload
+
+[33mcommit fd81d7015562c2af90fef7831c94806b15a8ced2[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Wed Nov 8 20:36:31 2023 +0900
+
+    Init_Data
+
+[33mcommit 386203ad136f4189f8934992667f737a3f635b3e[m
+Author: kohjun <kohjun@gmail.com>
+Date:   Mon Nov 6 21:06:02 2023 +0900
+
+    v1
